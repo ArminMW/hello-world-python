@@ -5,7 +5,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write(b"Hello, bank, we are changing! AGAIN!\n")
+        self.wfile.write(b"Hello, bank, we are changing! Again!\n")
         return
 
 httpd = HTTPServer(('', 8080), RequestHandler)
