@@ -7,7 +7,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        x=x+1
+        x = x + 1
         self.wfile.write(b"Hello, DB/PB, we are changing! Again!" + repr(x) + "\n")
         return
 
