@@ -9,7 +9,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         x=x+1
         self.wfile.write(b"Hello, DB/PB, we are changing! Again!\n")
-        self.wfile.write(x)
         return
 
 httpd = HTTPServer(('', 8080), RequestHandler)
